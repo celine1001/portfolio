@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>트와이스</title>
+    <link rel="stylesheet" href="../../font/font2/flaticon.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.nav button').click(function(){
+                $(this).next('ul').slideToggle(500)
+            })
+            $(window).resize(function(){
+                if($(this).width() < 768){
+                    $('.nav ul').css('display','none')
+                }else if($(this).width() > 767){
+                    $('.nav ul').css('display','block')
+                }
+            })
+        })
+        
+    </script>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
+
+        *{margin: 0;padding: 0;}
+        body,html{height:100%;}
+        ul,ol{list-style:none;}
+        .wrapper{
+            height:100%; 
+            position:relative;
+        }
+        .wrapper .header{
+            position:relative;
+            width:100%;
+            left:0; top:0;
+            padding:0 30px; 
+            box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+        	-moz-box-sizing:border-box;
+        	-o-box-sizing:border-box;	
+            height: 100px;
+            background-color:rgba(255,255,255,0.7);
+            box-shadow:0 2px 5px #ccc;
+            transition:1s;
+            z-index:2;
+        }
+        .wrapper .header .mark{float:left;}
+        .wrapper .header .nav{float: right;}
+        .wrapper .header .nav button{display:none;}
+        .wrapper .header .nav ul{font-size:0;}
+        .wrapper .header .nav li{
+            display:inline-block;
+            vertical-align:top;
+            font-size:12px;
+            line-height:100px;
+        }
+        .wrapper .header .nav li a{
+            padding:0 15px;
+            display:block;
+            transition:0.3s;
+            text-decoration:none;
+            font-size:1.5em;
+            font-family: 'Oswald', sans-serif;
+            color:#08e9d1;
+        }
+        .wrapper .header .nav li a:hover{
+            border-top:3px #ffb0b0 solid;
+            color:#ffb0b0;
+        }
+        .wrapper .header .mark a{
+            display:block; 
+            width: 104px; height:40px; padding:25px;
+            background-image: url(http://twice.jype.com/images/logo-s.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition:1s;
+        }
+        .wrapper .header .mark a:hover{
+            transform:rotateY(180deg);
+            padding-bottom:5px;
+        }
+        .footer{
+            width:100%; height:57px;
+            position:fixed; bottom:0;
+        }
+        .footer-box{
+            width:100%; height:57px;
+            padding:0 30px;
+            box-sizing: border-box;
+            -webkit-box-sizing:border-box;
+        	-moz-box-sizing:border-box;
+        	-o-box-sizing:border-box;
+        }
+        .left-logo{width:115px; height:45px; float:left; position:relative; top:8px;}
+        .left-logo a{
+            width:115px; height:45px;
+            background-image:url(http://twice.jype.com/images/jyplogo-b.png);
+            display:block;
+        }
+        .right-sns{
+            width:150px; height:30px;
+            position:relative;
+            float:right;
+        }
+        .right-sns a{float:left; line-height:57px; text-decoration:none;}
+        .flaticon-facebook-logo:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin:0;
+            border-radius:5px;
+            padding:5px;
+        }
+        .flaticon-twitter-logo-silhouette:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin-left:10px;
+            border-radius:5px;
+            padding:5px;
+        }
+        .flaticon-instagram-social-network-logo-of-photo-camera:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin-left:10px;
+            border-radius:5px;
+            padding:5px;
+        }
+        .flaticon-youtube:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin-left:10px;
+            border-radius:5px;
+            padding:5px;
+        }
+        .content{
+            height:100%;
+            position:relative;
+        }
+        .title{
+            height:110px;
+            line-height:110px;
+            background-image:url(../img/title-gallery.png);
+            background-repeat:no-repeat;
+            background-position:center;
+            margin:0 auto;
+            background-color:#f4f4f4;
+        }
+        .img{
+            max-width: 1000px;
+            width: 85%;
+            margin: 0 auto;
+            padding-bottom: 50px;
+            overflow: hidden;
+        }
+        .imgwrap{
+            max-width:769px;
+            margin:40px auto;
+            overflow: hidden;
+        }
+        .imgwrap li{
+            float:left;
+            width:20%;
+            height:auto;
+        }
+        .imgwrap li img{
+            max-width:100%;
+        }
+
+        @media screen and (max-width:768px){
+            .wrapper .header{
+                height: 55px; padding:0;
+                background-color:#fff;
+                z-index:1;
+            }
+            .wrapper .header .mark a{
+                padding:0; height: 44px; 
+                transform:scale(0.6,0.6);
+            }
+            /*scale로 줄이지 않고 width,height값으로 크기를 줄여도 된다*/
+        
+            .wrapper .header .mark a:hover{
+                padding:0; height:44px;
+                transform:scale(0.6,0.6) rotateY(180deg);
+            }
+            
+            .wrapper .header .nav button{
+                display:block;
+                height:55px; border:0 none;
+                padding:20px 50px;
+                font-size:14px;
+                color:#fff;
+                background-color:rgb(8, 233, 209);
+                cursor:pointer;
+                font-family: 'Oswald', sans-serif;
+            }
+            .wrapper .header .nav ul{
+                display:none;
+                position:absolute;
+                background-color: rgba(255,255,255,0.6);
+                width:100%;
+            }
+            .wrapper .header .nav ul li{
+                vertical-align:left;
+                line-height:40px;
+                display:block;
+            }
+            .wrapper .header .nav li a:hover{
+                color:#ffb0b0;
+                border-top:0; 
+                border-left:3px #ffb0b0 solid;
+            }
+            .imgwrap{
+                max-width:480px;
+            }
+            .imgwrap li{
+                width:32%;
+            }
+        }
+        @media screen and (max-width:479px){
+            .img{
+                padding-bottom: 10px;
+            }
+            .imgwrap{
+                max-width:300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="mark">
+                <a href="mailto:"></a>
+            </div>
+            <div class="nav">
+                <button>Main Menu</button>
+                <ul>
+                    <li><a href="">PROFILE</a></li>
+                    <li><a href="">DISCOGRAPHY</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">VIDEO</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title"></div>
+            <div class="img">
+                <div class="imgwrap">
+                    <ul>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/6-001.jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/5-006.jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/4-005.jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/3-004.jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/2-003.jpg" alt=""></li>
+                        
+                        <li><img src="http://az879543.vo.msecnd.net/twice/1-002.jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/10-010(4).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/9-009(4).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/8-008(5).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/7-007(6).jpg" alt=""></li>
+                        
+                        <li><img src="http://az879543.vo.msecnd.net/twice/6-006(6).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/5-005(8).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/4-004(8).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/3-003(10).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/3-003(9).jpg" alt=""></li>
+                        
+                        <li><img src="http://az879543.vo.msecnd.net/twice/2-002(8).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/1-001(9).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/13-013(2).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/12-012(2).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/11-011(2).jpg" alt=""></li>
+                        
+                        <li><img src="http://az879543.vo.msecnd.net/twice/10-010(3).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/9-009(3).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/8-008(4).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/6-006(5).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/5-005(7).jpg" alt=""></li>
+                        
+                        <li><img src="http://az879543.vo.msecnd.net/twice/4-004(7).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/3-003(8).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/2-002(7).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/1-001(8).jpg" alt=""></li>
+                        <li><img src="http://az879543.vo.msecnd.net/twice/5-005(6).jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-box">
+                <div class="left-logo">
+                    <a href="#"></a>
+                </div>
+                <div class="right-sns">
+                    <a href="#"><span class="flaticon-facebook-logo"></span></a>
+                    <a href="#"><span class="flaticon-twitter-logo-silhouette"></span></a>
+                    <a href="#"><span class="flaticon-instagram-social-network-logo-of-photo-camera"></span></a>
+                    <a href="#"><span class="flaticon-youtube"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
