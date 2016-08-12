@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>트와이스</title>
-    <link rel="stylesheet" href="../../font/font2/flaticon.css" type="text/css" />
+    <link rel="stylesheet" href="../font2/flaticon.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -18,8 +18,12 @@
                     $('.nav ul').css('display','block')
                 }
             })
+            
+            $('.nav-dot a').click(function(){
+               $(this).addClass('on').parent('li').siblings().children('a').removeClass();
+                return false;
+            })
         })
-        
     </script>
     <style type="text/css">
         @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
@@ -137,6 +141,7 @@
             border-radius:5px;
             padding:5px;
         }
+        /*------------------------------------------------------------------*/
         .content{
             height:100%;
             position:relative;
@@ -150,17 +155,20 @@
             margin:0 auto;
             background-color:#f4f4f4;
         }
+        .district{
+            padding: 50px 0;
+        }
         .img{
             max-width: 1000px;
             width: 85%;
             margin: 0 auto;
-            padding-bottom: 50px;
             overflow: hidden;
         }
         .imgwrap{
             max-width:769px;
-            margin:40px auto;
+            margin:0 auto;
             overflow: hidden;
+            padding: 40px 0;
         }
         .imgwrap li{
             float:left;
@@ -169,6 +177,21 @@
         }
         .imgwrap li img{
             max-width:100%;
+        }
+        .nav-dot{
+            text-align:center;
+        }
+        .nav-dot li{
+            display:inline-block;
+        }
+        .nav-dot a{
+            display: block;
+            width: 9px;
+            height: 9px;
+            background-image:url(../img/list-nav.png);
+        }
+        .nav-dot a.on{
+            background-image:url(../img/list-nav-on.png);
         }
 
         @media screen and (max-width:768px){
@@ -251,44 +274,64 @@
         </div>
         <div class="content">
             <div class="title"></div>
-            <div class="img">
-                <div class="imgwrap">
+            <div class="district">
+                <div class="img">
+                    <div class="imgwrap">
+                        <ul>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/6-001.jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/5-006.jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/4-005.jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/3-004.jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/2-003.jpg" alt=""></li>
+                            
+                            <li><img src="http://az879543.vo.msecnd.net/twice/1-002.jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/10-010(4).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/9-009(4).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/8-008(5).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/7-007(6).jpg" alt=""></li>
+                            
+                            <li><img src="http://az879543.vo.msecnd.net/twice/6-006(6).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/5-005(8).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/4-004(8).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/3-003(10).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/3-003(9).jpg" alt=""></li>
+                            
+                            <li><img src="http://az879543.vo.msecnd.net/twice/2-002(8).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/1-001(9).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/13-013(2).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/12-012(2).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/11-011(2).jpg" alt=""></li>
+                            
+                            <li><img src="http://az879543.vo.msecnd.net/twice/10-010(3).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/9-009(3).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/8-008(4).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/6-006(5).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/5-005(7).jpg" alt=""></li>
+                            
+                            <li><img src="http://az879543.vo.msecnd.net/twice/4-004(7).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/3-003(8).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/2-002(7).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/1-001(8).jpg" alt=""></li>
+                            <li><img src="http://az879543.vo.msecnd.net/twice/5-005(6).jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-dot">
                     <ul>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/6-001.jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/5-006.jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/4-005.jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/3-004.jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/2-003.jpg" alt=""></li>
-                        
-                        <li><img src="http://az879543.vo.msecnd.net/twice/1-002.jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/10-010(4).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/9-009(4).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/8-008(5).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/7-007(6).jpg" alt=""></li>
-                        
-                        <li><img src="http://az879543.vo.msecnd.net/twice/6-006(6).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/5-005(8).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/4-004(8).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/3-003(10).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/3-003(9).jpg" alt=""></li>
-                        
-                        <li><img src="http://az879543.vo.msecnd.net/twice/2-002(8).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/1-001(9).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/13-013(2).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/12-012(2).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/11-011(2).jpg" alt=""></li>
-                        
-                        <li><img src="http://az879543.vo.msecnd.net/twice/10-010(3).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/9-009(3).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/8-008(4).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/6-006(5).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/5-005(7).jpg" alt=""></li>
-                        
-                        <li><img src="http://az879543.vo.msecnd.net/twice/4-004(7).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/3-003(8).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/2-002(7).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/1-001(8).jpg" alt=""></li>
-                        <li><img src="http://az879543.vo.msecnd.net/twice/5-005(6).jpg" alt=""></li>
+                        <li><a href="#" class="on"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
                     </ul>
                 </div>
             </div>
