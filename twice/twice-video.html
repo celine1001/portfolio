@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>twice</title>
+    <title>video</title>
     <link rel="stylesheet" href="../font2/flaticon.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
@@ -18,8 +18,20 @@
                     $('.nav ul').css('display','block')
                 }
             })
+            
+            $('.nav-dot a').click(function(){
+               $(this).addClass('on').parent('li').siblings().children('a').removeClass();
+                return false;
+            })
+            
+            $('.smList a').click(function(){
+                var url = $(this).attr('href')
+                var location = 'https://www.youtube.com/embed/'+url+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen'
+                $('.bigView iframe').attr('src',location);
+
+                return false;
+            })
         })
-        
     </script>
     <style type="text/css">
         @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
@@ -28,28 +40,11 @@
         body,html{height:100%;}
         ul,ol{list-style:none;}
         .wrapper{
-            height:100%; 
-            background-image: url(http://ghavpdlwl.blob.core.windows.net/twice/bg-pc.jpg);
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: center top;
-        }
-        .wrapper .logo{
-            width: 350px;
-            height:350px;
-            background-image: url(http://twice.jype.com/images/mainlogo.png);
-            position:absolute; 
-            top:35%;
-            transform:scale(0.9,0.9);
-            transition:1s;
-        }
-        .wrapper .logo:hover{
-            transform:scale(1.2,1.2);
-            opacity:0;
+            height:auto; 
+            position:relative;
         }
         .wrapper .header{
-            position:fixed;
+            position:relative;
             width:100%;
             left:0; top:0;
             padding:0 30px; 
@@ -61,6 +56,7 @@
             background-color:rgba(255,255,255,0.7);
             box-shadow:0 2px 5px #ccc;
             transition:1s;
+            z-index:2;
         }
         .wrapper .header .mark{float:left;}
         .wrapper .header .nav{float: right;}
@@ -153,22 +149,58 @@
             border-radius:5px;
             padding:5px;
         }
+        /*------------------------------------------------------------------*/
+        .content{
+            height:auto;
+            position:relative;
+            padding-bottom:50px;
+        }
+        .title{
+            height:110px;
+            line-height:110px;
+            background-image:url(../img/title-video.png);
+            background-repeat:no-repeat;
+            background-position:center;
+            margin:0 auto;
+            background-color:#f4f4f4;
+        }
+        .district{
+            padding: 50px 0;
+            text-align:center;
+        }
+        .smList{
+            min-width: 80%;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 0 10px 0;
+        }
+        .smList li{
+            max-width: 200px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .smList img{
+            border: solid 1px #CCCCCC;
+            max-width: 100%;
+        }
+        .nav-dot{
+            text-align:center;
+        }
+        .nav-dot li{
+            display:inline-block;
+        }
+        .nav-dot a{
+            display: block;
+            width: 9px;
+            height: 9px;
+            background-image:url(../img/list-nav.png);
+        }
+        .nav-dot a.on{
+            background-image:url(../img/list-nav-on.png);
+        }
+    
 
-            @media screen and (max-width:768px){
-            .wrapper{
-                background-image: url(http://ghavpdlwl.blob.core.windows.net/twice/bg-720.jpg);
-                background-position: center center;
-            }
-            .wrapper .logo{
-                width:250px;
-                height:250px;
-                background-image:url(../img/mainlogo.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-                position:relative; 
-                margin:0 auto; 
-                top:9%;
-            }
+        @media screen and (max-width:768px){
             .wrapper .header{
                 height: 55px; padding:0;
                 background-color:#fff;
@@ -209,11 +241,51 @@
             .wrapper .header .nav li a:hover{
                 color:#ffb0b0;
                 border-top:0; 
-                border-left:3px #ffb0b0 solid;}
+                border-left:3px #ffb0b0 solid;
+            }
+            .title{
+                height:105px;
+                line-height:105px;
+                background-image:url(../img/title-video.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size: 30%;
+                margin:0 auto;
+                background-color:#f4f4f4;
+            }
+            .district{
+                padding:10px 0;
+            }
+            .bigView iframe{
+                width: 80%;
+                height: 360px;
+            }
+            .smList li{
+                max-width: 140px;
+            }
         }
-        
-        
-        
+        @media screen and (max-width:479px){
+            .title{
+                height:50px;
+                line-height:50px;
+                background-image:url(../img/title-video.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size: 30%;
+                margin:0 auto;
+                background-color:#f4f4f4;
+            }
+            .district{
+                padding: 30px 0 60px 0;
+            }
+            .bigView iframe{
+                width: 80%;
+                height: 240px;
+            }
+            .smList li{
+                max-width: 90px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -234,7 +306,27 @@
                 </ul>
             </div>
         </div>
-        <div class="logo"></div>
+        <div class="content">
+            <div class="title"></div>
+            <div class="district">
+                <div class="bigView">
+                    <iframe width="760" height="480" src="https://www.youtube.com/embed/c7rCyll5AeY?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="smList">
+                    <ul>
+                        <li><a href="c7rCyll5AeY"><img src="../img/mqdefault.jpg" alt=""></a></li>
+                        <li><a href="xe9UVM4yfhE"><img src="../img/mqdefault (1).jpg" alt=""></a></li>
+                        <li><a href="Id9GlwBk49Y"><img src="../img/mqdefault (2).jpg" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="nav-dot">
+                    <ul>
+                        <li><a href="#" class="on"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="footer">
             <div class="footer-box">
                 <div class="left-logo">

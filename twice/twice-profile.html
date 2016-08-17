@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>트와이스</title>
+    <title>profile</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -75,15 +75,17 @@
             display:none;
         }
         .wrapper{
-            height:100%; 
+            height:100%;
+            min-height:100%; 
             background-image: url(../img/tp1.jpg);
             background-repeat: no-repeat;
             -webkit-background-size: cover;
             background-size: cover;
             background-position: center;
+            overflow:auto;
         }
         .wrapper .header{
-            z-index:1;
+            z-index:10;
             position:fixed;
             width:100%;
             left:0; top:0;
@@ -142,7 +144,7 @@
             position:absolute;
             margin-left: 8%;
             width: 250px;
-            top: 23%;
+            top: 13%;
             z-index: 1;
             text-align: center;
         }
@@ -260,17 +262,18 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="haha"></div>
         <div class="header">
             <div class="mark">
-                <a href="mailto:"></a>
+                <a href="twice-mail.html"></a>
             </div>
             <div class="nav">
                 <button>Main Menu</button>
                 <ul>
-                    <li><a href="">PROFILE</a></li>
+                    <li><a href="twice-profile.html">PROFILE</a></li>
                     <li><a href="">DISCOGRAPHY</a></li>
-                    <li><a href="">GALLERY</a></li>
-                    <li><a href="">VIDEO</a></li>
+                    <li><a href="twice-gallery.html">GALLERY</a></li>
+                    <li><a href="twice-video.html">VIDEO</a></li>
                     <li><a href="">NOTICE</a></li>
                     <li><a href="">SCHEDULE</a></li>
                 </ul>
