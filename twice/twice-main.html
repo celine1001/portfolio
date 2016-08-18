@@ -71,6 +71,7 @@
             vertical-align:top;
             font-size:12px;
             line-height:100px;
+            background-color: rgba(255,255,255,0.8);
         }
         .wrapper .header .nav li a{
             padding:0 15px;
@@ -211,7 +212,57 @@
                 border-top:0; 
                 border-left:3px #ffb0b0 solid;}
         }
-        
+        @media screen and (max-width:479px){
+            .wrapper .header{
+                min-height: 40px;
+                height: 40px;
+            }
+            .wrapper .header .mark a{
+                width: 60px;
+                height: 35px;
+                background-size: cover;
+            }
+            .wrapper .header .nav button{
+                height: 40px;
+                padding: 10px 10px;
+                width: 150px;
+                font-size: 14px;
+                box-sizing: border-box;
+            }
+            .wrapper .header .nav li a{
+                padding:0 8px;
+                font-size:1.3em;
+            }
+            .wrapper .logo{
+                background-size:75%;
+                top:10%;
+                background-position: center;
+            }
+            .footer{
+                height:37px;
+                background-image:url(http://twice.jype.com/images/footerbg.png);
+            }
+            .footer-box{
+                height:37px;
+                padding:0 7%;
+            }
+            .left-logo{
+                top:5px;
+            }
+            .left-logo a{
+                background-size: 60%;
+                background-repeat:no-repeat;
+            }
+            .right-sns a{
+                line-height:37px;
+            }
+            .flaticon-facebook-logo:before,
+            .flaticon-twitter-logo-silhouette:before,
+            .flaticon-instagram-social-network-logo-of-photo-camera:before,
+            .flaticon-youtube:before{
+                font-size:13px;
+            }
+        }
         
         
     </style>

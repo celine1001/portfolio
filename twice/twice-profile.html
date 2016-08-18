@@ -108,6 +108,7 @@
             vertical-align:top;
             font-size:12px;
             line-height:100px;
+            background-color: rgba(255,255,255,0.8);
         }
         .wrapper .header .nav li a{
             padding:0 15px;
@@ -237,11 +238,15 @@
         }
         @media screen and (max-width:479px){
             .wrapper .header{
-                height:40px;
+                min-height: 40px;
+                height: 40px;
             }
             .wrapper .header .nav button{
-                height:40px;
-                padding:10px 40px;
+                height: 40px;
+                padding: 10px 10px;
+                width: 150px;
+                font-size: 14px;
+                box-sizing: border-box;
             }
             .thumb{
                 width:256px;
@@ -254,6 +259,20 @@
             }
             .thumb li img{
                 opacity:0.9;
+            }
+            .wrapper .header .mark a{
+                width: 60px;
+                height: 35px;
+                background-size: cover;
+            }
+            .wrapper .header .nav li a{
+                padding:0 8px;
+                font-size:1.3em;
+            }
+            .wrapper .logo{
+                background-size:75%;
+                top:10%;
+                background-position: center;
             }
         }
         
