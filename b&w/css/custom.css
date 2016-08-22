@@ -1,0 +1,10 @@
+/* your styles go here */
+#portfolio .col-sm-4{
+    text-align: center;
+}
+#portfolio .col-sm-4 a{
+    text-decoration: none;
+}
+.overlay{
+    background-image:url(../img/moon.jpg);
+}
