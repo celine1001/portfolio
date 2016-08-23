@@ -8,6 +8,17 @@ $(function () {
 
 });
 
+    
+$(function(){
+    $('#portfolio .dka').mouseenter(function(){
+      console.log('aa')
+      $(this).find('img').css('opacity','1')
+    }).mouseleave(function(){
+      $(this).find('img').css('opacity','0.5')
+    })
+})
+    
+
 /* for demo purpose only - can be deleted */
 
 function demo() {

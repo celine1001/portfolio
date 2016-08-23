@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Black And White Bootstrap Landing Page / Portfolio</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,9 +61,9 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#intro">Home</a></li>
                 <li><a href="#about">About </a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#services">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#text">Text</a></li>
+                <!--<li><a href="#text">Text</a></li>-->
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
@@ -79,7 +80,7 @@
             <h2 class="heading">About me</h2>
             <p class="lead">시작하는 퍼블리셔입니다.</p>
             <p>안녕하세요. 새롭게 시작하는 퍼블리셔 장선경입니다.</p>
-            <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery. </p>
+            <p>저는 꼼꼼하고 말이 없는 편이고 가만히 앉아있는 것을 좋아하고 먹는 것을 즐기고 락을 즐겨듣고 무엇이든 실행하기 이전에 검색해보고 계획 세우는 것을 좋아하고 선선한 날 걷는 것을 좋아하고 제일 중요한 코딩을 좋아합니다.</p>
           </div>
           <div class="col-md-5 col-md-offset-1">
             <p><img src="img/japan-mountains.jpg" alt="" class="img-responsive img-circle"></p>
@@ -93,27 +94,39 @@
       <div class="container">
         <div class="row services">
           <div class="col-md-12">
-            <h2 class="heading">Services</h2>
+            <h2 class="heading">Skills</h2>
             <div class="row">
               <div class="col-sm-4">
                 <div class="box">
-                  <div class="icon"><i class="fa fa-desktop"></i></div>
-                  <h4>Webdesign</h4>
-                  <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them.</p>
+                  <div class="icon1"></div>
+                  <h4>xhtml/html5</h4>
+                  <p>문법규칙을 이해하고 사용 가능합니다.</p>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="box">
-                  <div class="icon"><i class="fa fa-print"></i></div>
-                  <h4>Print</h4>
-                  <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural.</p>
+                  <div class="icon2"></div>
+                  <h4>css2/css3</h4>
+                  <p>신규효과를 알고있고 활용이 가능합니다.</p>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="box">
-                  <div class="icon"><i class="fa fa-globe"></i></div>
-                  <h4>SEO and SEM</h4>
-                  <p>Am terminated it excellence invitation projection as. She graceful shy. </p>
+                  <div class="icon3"></div>
+                  <h4 style="font-size:20px;">javascript/ <br />jquery</h4>
+                  <p>javascript의 기본문법을 이해하고 jquery 기본적인 프론트 효과를 제작할 수 있습니다.</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box">
+                  <div class="icon4"></div>
+                  <h4>more...</h4>
+                  <ul style="padding:0;">
+                    <li><a href="https://github.com/celine1001">Git : github.com/celine1001(click)</a></li>
+                    <li>SVN : 사용경험</li>
+                    <li><a href="WBS.pdf">WBS : Redmine 사용경험(click)</a></li>
+                    <li>LESS : 사용경험</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -131,18 +144,17 @@
             <div class="row">
               <div class="col-md-12 col-lg-8">
                 <h2 class="heading">Portfolio</h2>
-                <p>Put your portfolio or gallery images here for example. Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh. </p>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-4">
-                <div class="box"><a href="http://pf.i-make.kr:8080/homibing/html/home.jsp" title="" target="blank"><img src="img/homibing.jpeg" alt="" class="img-responsive"><p>호미빙 - 반응형(team project)</p></a></div>
+                <div class="box"><a href="http://pf.i-make.kr:8080/homibing/html/home.jsp" title="" target="blank"><span class="dka"><img src="img/homibing.jpeg" alt="" class="img-responsive"></span><p>호미빙 - 반응형(team project)</p></a></div>
               </div>
               <div class="col-sm-4">
-                <div class="box"><a href="img/portfolio-2.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 2" data-footer="Some footer information"><img src="img/portfolio-2.jpg" alt="" class="img-responsive"></a></div>
+                  <div class="box"><a href="img/portfolio-2.jpg" title="" target="blank"><span class="dka"><img src="img/twice-main.jpeg" alt="" class="img-responsive"></span><p>트와이스 - 반응형(개인)</p></a></div>
               </div>
               <div class="col-sm-4">
-                <div class="box"><a href="img/portfolio-3.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 3" data-footer="Some footer information"><img src="img/portfolio-3.jpg" alt="" class="img-responsive"></a></div>
+                <div class="box"><a href="http://nillavanilla.firstmall.kr/main/index" title="" target="blank"><span class="dka"><img src="img/nilla.jpeg" alt="" class="img-responsive"></span><p>바닐라 - 메인</p></a></div>
               </div>
             </div>
             <div class="row">
@@ -153,19 +165,8 @@
                 <div class="box"><a href="img/portfolio-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 5" data-footer="Some footer information"><img src="img/portfolio-5.jpg" alt="" class="img-responsive"></a></div>
               </div>
               <div class="col-sm-4">
-                <div class="box"><a href="img/portfolio-6.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 6" data-footer="Some footer information"><img src="img/portfolio-6.jpg" alt="" class="img-responsive"></a></div>
+                <div class="box"><a href="img/portfolio-8.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 6" data-footer="Some footer information"><img src="img/portfolio-8.jpg" alt="" class="img-responsive"></a></div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="box"><a href="img/portfolio-7.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 7" data-footer="Some footer information"><img src="img/portfolio-7.jpg" alt="" class="img-responsive"></a></div>
-              </div></a>
-              <div class="col-sm-4">
-                <div class="box"><a href="img/portfolio-8.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 8" data-footer="Some footer information"><img src="img/portfolio-8.jpg" alt="" class="img-responsive"></a></div>
-              </div></a>
-              <div class="col-sm-4">
-                <div class="box"><a href="img/portfolio-9.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 9" data-footer="Some footer information"><img src="img/portfolio-9.jpg" alt="" class="img-responsive"></a></div>
-              </div></a>
             </div>
           </div>
         </div>
@@ -173,28 +174,28 @@
     </section>
     <!-- Portfolio / gallery end-->
     <!-- text page-->
-    <section id="text" style="background-color: #333;" class="text-page section-inverse">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading">Text page</h2>
-            <div class="row">
-              <div class="col-sm-6">
-                <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh. </p>
-                <p>Betrayed cheerful declared end and. Questions we additions is extremely incommode. Next half add call them eat face. Age lived smile six defer bed their few. Had admitting concluded too behaviour him she. Of death to or to being other. </p>
-              </div>
-              <div class="col-sm-6">
-                <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed. </p>
-                <p>Saw yet kindness too replying whatever marianne. Old sentiments resolution admiration unaffected its mrs literature. Behaviour new set existence dashwoods. It satisfied to mr commanded consisted disposing engrossed. Tall snug do of till on easy. Form not calm new fail. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!--<section id="text" style="background-color: #333;" class="text-page section-inverse">-->
+    <!--  <div class="container">-->
+    <!--    <div class="row">-->
+    <!--      <div class="col-md-12">-->
+    <!--        <h2 class="heading">Text page</h2>-->
+    <!--        <div class="row">-->
+    <!--          <div class="col-sm-6">-->
+    <!--            <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh. </p>-->
+    <!--            <p>Betrayed cheerful declared end and. Questions we additions is extremely incommode. Next half add call them eat face. Age lived smile six defer bed their few. Had admitting concluded too behaviour him she. Of death to or to being other. </p>-->
+    <!--          </div>-->
+    <!--          <div class="col-sm-6">-->
+    <!--            <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed. </p>-->
+    <!--            <p>Saw yet kindness too replying whatever marianne. Old sentiments resolution admiration unaffected its mrs literature. Behaviour new set existence dashwoods. It satisfied to mr commanded consisted disposing engrossed. Tall snug do of till on easy. Form not calm new fail. </p>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</section>-->
     <!-- text page end-->
     <!-- contact-->
-    <section id="contact" style="background-color: #fff;" class="text-page"> 
+    <section id="contact" style="background-color: #eee;" class="text-page"> 
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -246,7 +247,7 @@
       <div class="container"> 
         <div class="row copyright">
           <div class="col-md-6">
-            <p>&copy;2015 Your name/company goes here</p>
+            <p>&copy;2016 sunkyung Jang</p>
           </div>
           <div class="col-md-6">
             <p class="credit">Template by <a href="http://bootstrapious.com/landing-pages">Bootstrapious</a></p>
