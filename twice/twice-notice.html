@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>notice</title>
+    <link rel="stylesheet" href="../font2/flaticon.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.nav button').click(function(){
+                $(this).next('ul').slideToggle(500)
+            })
+            $(window).resize(function(){
+                if($(this).width() < 768){
+                    $('.nav ul').css('display','none')
+                }else if($(this).width() > 767){
+                    $('.nav ul').css('display','block')
+                }
+            })
+            
+            $('.nav-dot a').click(function(){
+               $(this).addClass('on').parent('li').siblings().children('a').removeClass();
+                return false;
+            })
+            
+            $('.smList a').click(function(){
+                var url = $(this).attr('href')
+                var location = 'https://www.youtube.com/embed/'+url+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen'
+                $('.bigView iframe').attr('src',location);
+
+                return false;
+            })
+        })
+    </script>
+    <style type="text/css">
+        @import url(//fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
+        @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+        @import url(//fonts.googleapis.com/css?family=Oswald);
+        @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+        *{margin: 0;padding: 0;}
+        body,html{height:100%;}
+        ul,ol{list-style:none;}
+        .wrapper{
+            height:auto; 
+            position:relative;
+        }
+        .wrapper .header{
+            position:relative;
+            width:100%;
+            left:0; top:0;
+            padding:0 30px; 
+            box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+        	-moz-box-sizing:border-box;
+        	-o-box-sizing:border-box;	
+            height: 100px;
+            background-color:rgba(255,255,255,0.7);
+            box-shadow:0 2px 5px #ccc;
+            transition:1s;
+            z-index:2;
+        }
+        .wrapper .header .mark{float:left;}
+        .wrapper .header .nav{float: right;}
+        .wrapper .header .nav button{display:none;}
+        .wrapper .header .nav ul{font-size:0;}
+        .wrapper .header .nav li{
+            display:inline-block;
+            vertical-align:top;
+            font-size:12px;
+            line-height:100px;
+        }
+        .wrapper .header .nav li a{
+            padding:0 15px;
+            display:block;
+            transition:0.3s;
+            text-decoration:none;
+            font-size:1.5em;
+            font-family: 'Oswald', sans-serif;
+            color:#08e9d1;
+        }
+        .wrapper .header .nav li a:hover{
+            border-top:3px #ffb0b0 solid;
+            color:#ffb0b0;
+        }
+        .wrapper .header .mark a{
+            display:block; 
+            width: 104px; height:40px; padding:25px;
+            background-image: url(http://twice.jype.com/images/logo-s.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition:1s;
+        }
+        .wrapper .header .mark a:hover{
+            transform:rotateY(180deg);
+            padding-bottom:5px;
+        }
+        .footer{
+            width:100%; height:57px;
+            position:fixed; bottom:0;
+        }
+        .footer-box{
+            width:100%; height:57px;
+            padding:0 30px;
+            box-sizing: border-box;
+            -webkit-box-sizing:border-box;
+        	-moz-box-sizing:border-box;
+        	-o-box-sizing:border-box;
+        }
+        .left-logo{width:115px; height:45px; float:left; position:relative; top:8px;}
+        .left-logo a{
+            width:115px; height:45px;
+            background-image:url(http://twice.jype.com/images/jyplogo-b.png);
+            display:block;
+        }
+        .right-sns{
+            width:150px; height:30px;
+            position:relative;
+            float:right;
+        }
+        .right-sns a{float:left; line-height:57px; text-decoration:none;}
+        .flaticon-facebook-logo:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin:0;
+            border-radius:5px;
+            padding:5px;
+        }
+        .flaticon-twitter-logo-silhouette:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin-left:10px;
+            border-radius:5px;
+            padding:5px;
+        }
+        .flaticon-instagram-social-network-logo-of-photo-camera:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin-left:10px;
+            border-radius:5px;
+            padding:5px;
+        }
+        .flaticon-youtube:before{
+            font-size:20px;
+            background:#e4e4e4;
+            color:#000;
+            margin-left:10px;
+            border-radius:5px;
+            padding:5px;
+        }
+        /*------------------------------------------------------------------*/
+        .content{
+            height:auto;
+            position:relative;
+            padding-bottom:50px;
+        }
+        .title{
+            height:110px;
+            line-height:110px;
+            background-image:url(../img/title-noti.png);
+            background-repeat:no-repeat;
+            background-position:center;
+            margin:0 auto;
+            background-color:#f4f4f4;
+        }
+        .district{
+            padding: 50px 0;
+            /*text-align:center;*/
+            font-family: 'Nanum Gothic',monospace;
+        }
+        .nav-dot{
+            text-align:center;
+        }
+        .nav-dot li{
+            display:inline-block;
+        }
+        .nav-dot a{
+            display: block;
+            width: 9px;
+            height: 9px;
+            background-image:url(../img/list-nav.png);
+        }
+        .nav-dot a.on{
+            background-image:url(../img/list-nav-on.png);
+        }
+        .articleWrap{
+            max-width: 1000px;
+            width: 85%;
+            margin: 0 auto;
+        }
+        .arti-title{
+            background-color:#f8f5f2;
+            border-top:2px solid #d4d3d3;
+            border-bottom:1px solid #d4d3d3;
+            overflow:hidden;
+            line-height: 38px;
+        }
+        .arti-title span{
+            display:block;
+        }  
+        .arti-title span:first-child{
+            float:left;
+            width: 4%;
+            padding:2px 3px 0px 10px;
+            font-size:12px;
+        }
+        .arti-title span:first-child+span{
+            float:right;
+            width: auto;
+            padding: 4px 3% 0 0;
+            font-size:11px;
+        }
+        .arti-title span:first-child+span+span{
+            padding: 12px 0 10px 0;
+            margin: 0;
+            font-size: 13px;
+            line-height: 20px;
+            color:#05abf6;
+        }
+        .arti-title>span>b{
+            float:left;
+        }
+        .arti-con{
+            padding: 30px;
+            border-bottom: 1px solid #d4d3d3;
+            font-size:12px;
+            line-height: 1.6;
+        }
+        .arti-con dt, .arti-con dd{
+            display:inline-block;
+        }
+        .arti-con dt{
+            font-weight:bold;
+        }
+        .articleList{
+            border-top: 2px solid #d4d3d3;
+            margin-bottom:30px;
+        }
+        .a1{
+            background-color:#fcfcfc;
+            line-height:33px;
+            border-top:none;
+        }
+        .a1 a{
+            text-decoration:none;
+            color:#1e1e1e;
+            font-size:12px;
+        }
+        .a1 span:first-child, .a1 span:first-child+span{
+            color:#999;
+        }
+        .a1 span:first-child+span+span{
+            line-height:12px;
+        }
+
+        @media screen and (max-width:768px){
+            .wrapper .header .nav li{
+                background-color: rgba(255,255,255,0.8);
+            }
+
+            .wrapper .header{
+                height: 55px; padding:0;
+                background-color:#fff;
+                z-index:1;
+            }
+            .wrapper .header .mark a{
+                padding:0; height: 44px; 
+                transform:scale(0.6,0.6);
+            }
+            /*scale로 줄이지 않고 width,height값으로 크기를 줄여도 된다*/
+        
+            .wrapper .header .mark a:hover{
+                padding:0; height:44px;
+                transform:scale(0.6,0.6) rotateY(180deg);
+            }
+            
+            .wrapper .header .nav button{
+                display:block;
+                height:55px; border:0 none;
+                padding:20px 50px;
+                font-size:14px;
+                color:#fff;
+                background-color:rgb(8, 233, 209);
+                cursor:pointer;
+                font-family: 'Oswald', sans-serif;
+            }
+            .wrapper .header .nav ul{
+                display:none;
+                position:absolute;
+                background-color: rgba(255,255,255,0.6);
+                width:100%;
+            }
+            .wrapper .header .nav ul li{
+                vertical-align:left;
+                line-height:40px;
+                display:block;
+            }
+            .wrapper .header .nav li a:hover{
+                color:#ffb0b0;
+                border-top:0; 
+                border-left:3px #ffb0b0 solid;
+            }
+            .title{
+                height:105px;
+                line-height:105px;
+                background-image:url(../img/title-video.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size: 30%;
+                margin:0 auto;
+                background-color:#f4f4f4;
+            }
+            .district{
+                padding:10px 0;
+            }
+        }
+        @media screen and (max-width:479px){
+            .title{
+                height:50px;
+                line-height:50px;
+                background-image:url(../img/title-video.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size: 30%;
+                margin:0 auto;
+                background-color:#f4f4f4;
+            }
+            .district{
+                padding: 30px 0 60px 0;
+            }
+            .wrapper .header{
+                min-height: 40px;
+                height: 40px;
+            }
+            .wrapper .header .mark a{
+                width: 60px;
+                height: 35px;
+                background-size: cover;
+            }
+            .wrapper .header .nav button{
+                height: 40px;
+                padding: 10px 10px;
+                width: 150px;
+                font-size: 14px;
+                box-sizing: border-box;
+            }
+            .wrapper .header .nav li a{
+                padding:0 8px;
+                font-size:1.3em;
+            }
+            .wrapper .logo{
+                background-size:75%;
+                top:10%;
+                background-position: center;
+            }
+            .footer{
+                height:37px;
+                background-image:url(http://twice.jype.com/images/footerbg.png);
+            }
+            .footer-box{
+                height:37px;
+                padding:0 7%;
+            }
+            .left-logo{
+                top:5px;
+            }
+            .left-logo a{
+                background-size: 60%;
+                background-repeat:no-repeat;
+            }
+            .right-sns a{
+                line-height:37px;
+            }
+            .flaticon-facebook-logo:before,
+            .flaticon-twitter-logo-silhouette:before,
+            .flaticon-instagram-social-network-logo-of-photo-camera:before,
+            .flaticon-youtube:before{
+                font-size:13px;
+            }
+            .article .arti-title{
+                display:table;
+            }
+            .article .arti-title span:first-child,
+            .article .arti-title span:first-child+span{
+                display:none;
+            }
+            .article .arti-title span:first-child+span+span{
+                width: 95%;
+                padding: 13px;
+                font-size:15px;
+                display:table-cell;
+                line-height:15px;
+            }
+            .arti-con{
+                padding: 10px 7px 7px 7px;
+            }
+            .articleList .a1 span:first-child+span{
+                display:none;
+            }
+         }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="mark">
+                <a href="index.html"></a>
+            </div>
+            <div class="nav">
+                <button>Main Menu</button>
+                <ul>
+                    <li><a href="twice-profile.html">PROFILE</a></li>
+                    <li><a href="twice-disco.html">DISCOGRAPHY</a></li>
+                    <li><a href="twice-gallery.html">GALLERY</a></li>
+                    <li><a href="twice-video.html">VIDEO</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title"></div>
+            <div class="district">
+                <div class="articleWrap">
+                    <div class="article">
+                        <div class="arti-title">
+                            <span>29</span>
+                            <span>2016.06.27</span>
+                            <span><b>TWICE 2nd mini Album &lt;PAGE TWO&gt; SPECIAL EVENT 2 안내</b></span>
+                        </div>
+                        <div class="arti-con">
+                            <p>안녕하세요. JYPE 입니다.</p><br />
+                            <p>TWICE 2nd mini Album <PAGE TWO> SPECIAL EVENT 2 안내 입니다.</p><br /><br />
+                            <p>
+                                <dl>
+                                    <dt>날짜 :</dt><dd>&nbsp;2016년 7월 3일 일요일 <span style="color:blue; font-weight:bold;">오후 8시</span></dd><br />
+                                    <dt>장소 :</dt><dd style="color:red; font-weight:bold;">&nbsp;우리금융아트홀?(송파구 올림픽로 424 올림픽공원)</dd><br />
+                                    <dt>티켓 :</dt><dd>&nbsp;이벤트 당일, 입장시에 <span style="font-weight:bold; text-decoration:underline;">‘포토카드21종+렌티큘러9종’</span>과 <span style="font-weight:bold;">교환</span> 후 배부</dd><br />
+                                    <dt>번호표 배부 :</dt><dd style="color:blue; font-weight:bold;">&nbsp;Fan’s 사전 신청</dd><br />
+                                    <dt>티켓 교환 시간 : </dt><dd style="color:red; font-weight:bold;">&nbsp;7월 3일 (일) 오후 4시 ~</dd><br />
+                                    <dt style="font-weight:normal">*인기가요 출연으로 인하여 팬미팅 시작 시간이 변경되었습니다. 원스분들의 양해부탁드립니다.</dt><br />
+                                    <dt>Fan’s 사전 신청</dt><br />
+                                    <dt>-신청 기간 :</dt><dd style="font-weight:bold;">&nbsp;2016년 <span style="color:red; font-weight:bold;">6월 29일 (수) 오후 8시</span> ~ 6월 30일 (목) 오후 8시</dd><br />
+                                    <dt>-신청 방법 :</dt><dd style="font-weight:bold;">&nbsp;팬즈 내 [포카 1순위 신청] 게시판의 '신청' 버튼 클릭</dd><br />
+                                </dl>
+                            </p>
+                            <br /><br /><br />
+                            <p>
+                                <span style="font-weight:bold;">< 티켓 안내 ></span><br />
+                                FAN’S에서 사전 신청하신 번호의 순서대로 배부해드립니다.<br />
+                                <span style="font-weight:bold; text-decoration:underline;">티켓 교환시간까지 도착하지 않으신 경우에는 신청하신 순서가 무효 처리되며,가장 뒷번호를 배부해 드립니다.</span><br />
+                                입장 티켓 교환 시간까지 도착하신 분들의 입장 티켓 교환 후, 모임 시간까지 도착하지 않으신 분들의 티켓 교환을 사전신청 순서대로 추가 배부해드릴 예정입니다.<br />
+                                <span style="font-weight:bold; text-decoration:underline;">티켓 번호순대로 입장 예정 입니다. (좌석 선착순)</span><br />
+                                티켓은 1인당 1매까지 교환 가능합니다.<br />
+                                <span style="font-weight:bold;">포토카드는 수거 후 행사가 끝난 뒤</span> 돌려드릴 예정입니다.<br />
+                                포토카드는 빠른 확인을 위하여 나연1,2 -?정연1,2 - 모모1,2 - 사나1,2 - 지효1,2 - 미나1,2 - 다현1,2 - 채영1,2 - 쯔위1,2 - 유닛 1,2,3 - 렌티큘러 (나연,정연,모모,사나,지효,미나,다현,채영,쯔위) 순으로 준비 부탁 드립니다.
+                                티켓 분실시에는 재발권 및 공연장 입장이 불가하오니 티켓 보관에 유의하시기 바랍니다.<br />
+                                ( 티켓 분실, 파손 등 어떠한 경우에도 재발권 및 입장이 불가 )
+                            </p>
+                            <br /><br /><br />
+                            <p>
+                                <span style="font-weight:bold;">< 입장 및 관람 안내 ></span><br />
+                                공연 시작 1시간 전부터 입장이 진행될 예정입니다. 원활한 진행을 위해 공연 시작 10분 전까지 입장을 완료해 주시기 바랍니다.<br />
+                                1인 1티켓 소지를 원칙으로 입장 합니다. 입장하신 이후 잠시 자리를 비우실 경우에는 반드시 티켓을 소지하여 주시기 바랍니다. 티켓 미소지자는 재 입장이 절대 불가합니다.<br />
+                                화환 신청과 공연장 내 현수막 게시 신청은 별도로 받지 않습니다.<br />
+                                병, 폭죽, 레이저 등의 위험 물질과 음식물 반입을 삼가 주시기 바랍니다.<br />
+                                다른 관객 분들의 관람에 지장을 주는 행동은 삼가 주시기 바라며, 관람에 지나친 피해가 될 경우 진행요원의 제재를 받으실 수 있습니다.<br />
+                                물품 보관소는 운영하지 않으니 가급적 짐은 가볍게 하시고 참여해 주시기 바랍니다. 공연장 내 분실물에 대한 책임은 본인에게 있습니다.<br />
+                                상기 주의사항 및 진행요원의 지시 불응으로 인한 사고에 대해서 주최 측은 책임지지 않습니다.<br />
+                                즐거운 공연 관람을 위해 원스분들의 적극적인 협조를 부탁 드립니다.
+                            </p>
+                            <br /><br /><br />
+                            <p>
+                                <span style="font-weight:bold;">< 교통 안내 ></span><br />
+                                주차 공간을 따로 제공해드리지 않사오니, 대중교통을 이용해주시기 바랍니다.<br />
+                                지하철 :
+                            </p>
+                            <br />
+                            <img src="../img/우리금융아트홀2.jpg" alt="" style="height: 100%; width: 100%; max-width: 680px; max-height: 493px;"><br /><br /><br />
+                        </div>
+                    </div>
+                    <div class="articleList">
+                        <ul>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>29</span>
+                                    <span>2016.06.27</span>
+                                    <span><b><a href="#">TWICE 2nd mini Album &lt;PAGE TWO&gt; SPECIAL EVENT 2 안내</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>28</span>
+                                    <span>2016.06.22</span>
+                                    <span><b><a href="#">2016 JYP NATION CONCERT Ticket Open Notice</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>27</span>
+                                    <span>2016.06.18</span>
+                                    <span><b><a href="#">TWICE 2nd Mini Album ‘PAGE TWO’ 포토카드 이벤트 안내</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>26</span>
+                                    <span>2016.06.14</span>
+                                    <span><b><a href="#">Happy Birthday TZUYU ♥</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>25</span>
+                                    <span>2016.06.07</span>
+                                    <span><b><a href="#">TWICE CHEER UP PLAY</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>24</span>
+                                    <span>2016.05.30</span>
+                                    <span><b><a href="#">TWICE 블랙리스트 심화 기준 추가 안내 (160530)</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>23</span>
+                                    <span>2016.05.28</span>
+                                    <span><b><a href="#">Happy Birthday DAHYUN ♥</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>22</span>
+                                    <span>2016.05.02</span>
+                                    <span><b><a href="#">TWICE PAGE TWO 공개 방송 Special Event 안내</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>21</span>
+                                    <span>2016.04.29</span>
+                                    <span><b><a href="#">TWICE(트와이스) "CHEER UP " 공식 응원법</a></b></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="arti-title a1">
+                                    <span>20</span>
+                                    <span>2016.04.23</span>
+                                    <span><b><a href="#">Happy Birthday CHAEYOUNG ♥</a></b></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-dot">
+                    <ul>
+                        <li><a href="#" class="on"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-box">
+                <div class="left-logo">
+                    <a href="#"></a>
+                </div>
+                <div class="right-sns">
+                    <a href="#"><span class="flaticon-facebook-logo"></span></a>
+                    <a href="#"><span class="flaticon-twitter-logo-silhouette"></span></a>
+                    <a href="#"><span class="flaticon-instagram-social-network-logo-of-photo-camera"></span></a>
+                    <a href="#"><span class="flaticon-youtube"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
