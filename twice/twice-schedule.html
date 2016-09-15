@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>twice</title>
+    <title>schedule</title>
     <link rel="stylesheet" href="../font2/flaticon.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
@@ -18,38 +18,27 @@
                     $('.nav ul').css('display','block')
                 }
             })
+            
+            $('.nav-dot a').click(function(){
+               $(this).addClass('on').parent('li').siblings().children('a').removeClass();
+                return false;
+            })
         })
-        
     </script>
     <style type="text/css">
-        @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
-
+        @import url(//fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
+        @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+        @import url(//fonts.googleapis.com/css?family=Oswald);
+        @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); 
         *{margin: 0;padding: 0;}
         body,html{height:100%;}
         ul,ol{list-style:none;}
         .wrapper{
-            height:100%; 
-            background-image: url(http://ghavpdlwl.blob.core.windows.net/twice/bg-pc.jpg);
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: center top;
-        }
-        .wrapper .logo{
-            width: 350px;
-            height:350px;
-            background-image: url(http://twice.jype.com/images/mainlogo.png);
-            position:absolute; 
-            top:35%;
-            transform:scale(0.9,0.9);
-            transition:1s;
-        }
-        .wrapper .logo:hover{
-            transform:scale(1.2,1.2);
-            opacity:0;
+            height:auto; 
+            position:relative;
         }
         .wrapper .header{
-            position:fixed;
+            position:relative;
             width:100%;
             left:0; top:0;
             padding:0 30px; 
@@ -61,6 +50,7 @@
             background-color:rgba(255,255,255,0.7);
             box-shadow:0 2px 5px #ccc;
             transition:1s;
+            z-index:2;
         }
         .wrapper .header .mark{float:left;}
         .wrapper .header .nav{float: right;}
@@ -153,22 +143,58 @@
             border-radius:5px;
             padding:5px;
         }
+        /*------------------------------------------------------------------*/
+        .content{
+            height:auto;
+            position:relative;
+            padding-bottom:50px;
+        }
+        .title{
+            height:110px;
+            line-height:110px;
+            background-image:url(../img/title-sche.png);
+            background-repeat:no-repeat;
+            background-position:center;
+            margin:0 auto;
+            background-color:#f4f4f4;
+        }
+        .district{
+            padding: 50px 0;
+            font-family: 'Nanum Gothic',monospace;
+        }
+        .con-wrap{outline:1px #f00 solid;
+            max-width:1000px;
+            width:85%;
+            margin:0 auto;
+        }
+        .con-title{
+            height:40px;
+            background-color:#f8f5f2;
+        }
+        .con-title div:nth-child(1){
+            float:left;
+            margin-left:20px;
+            line-height:40px;
+        }
+        .con-title div:nth-child(2){
+            float:right;
+            margin-right:20px;
+            line-height:40px;
+        }
+        .con-title div:nth-child(3){
+            text-align:center;
+            font-family: 'Maven Pro', sans-serif;
+            letter-spacing: 1px;
+            font-size:13px;
+            color: #4a4a49;
+            line-height:40px;
+        }
 
-            @media screen and (max-width:768px){
-            .wrapper{
-                background-image: url(http://ghavpdlwl.blob.core.windows.net/twice/bg-720.jpg);
-                background-position: center center;
+        @media screen and (max-width:768px){
+            .wrapper .header .nav li{
+                background-color: rgba(255,255,255,0.8);
             }
-            .wrapper .logo{
-                width:250px;
-                height:250px;
-                background-image:url(../img/mainlogo.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-                position:relative; 
-                margin:0 auto; 
-                top:9%;
-            }
+
             .wrapper .header{
                 height: 55px; padding:0;
                 background-color:#fff;
@@ -209,12 +235,36 @@
             .wrapper .header .nav li a:hover{
                 color:#ffb0b0;
                 border-top:0; 
-                border-left:3px #ffb0b0 solid;}
-            .wrapper .header .nav li{
-                background-color: rgba(255,255,255,0.8);
+                border-left:3px #ffb0b0 solid;
+            }
+            .title{
+                height:105px;
+                line-height:105px;
+                background-image:url(../img/title-video.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size: 30%;
+                margin:0 auto;
+                background-color:#f4f4f4;
+            }
+            .district{
+                padding:10px 0;
             }
         }
         @media screen and (max-width:479px){
+            .title{
+                height:50px;
+                line-height:50px;
+                background-image:url(../img/title-video.png);
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size: 30%;
+                margin:0 auto;
+                background-color:#f4f4f4;
+            }
+            .district{
+                padding: 30px 0 60px 0;
+            }
             .wrapper .header{
                 min-height: 40px;
                 height: 40px;
@@ -264,10 +314,9 @@
             .flaticon-youtube:before{
                 font-size:13px;
             }
-        }
-        
-        
+         }
     </style>
+    
 </head>
 <body>
     <div class="wrapper">
@@ -287,7 +336,18 @@
                 </ul>
             </div>
         </div>
-        <div class="logo"></div>
+        <div class="content">
+            <div class="title"></div>
+            <div class="district">
+                <div class="con-wrap">
+                    <div class="con-title">
+                        <div><a href=""><img src="../img/btn-left.gif" alt=""></a></div>
+                        <div><a href=""><img src="../img/btn-right.gif" alt=""></a></div>
+                        <div><span>2016.9</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer">
             <div class="footer-box">
                 <div class="left-logo">
